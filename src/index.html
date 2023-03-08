@@ -2,7 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />    
     <title>Введение в JavaScript</title>
   </head>
   <body>
@@ -17,16 +18,16 @@
             <img src = "images/logo.svg" alt = "logo"/>
           </object>
           <nav class = "header__links">
-            <a href = "#" class = "header__link active">
+            <a href = "https://learn.javascript.ru/" class = "header__link active">
               Учебник
             </a>
-            <a href = "#" class = "header__link">
+            <a href = "https://learn.javascript.ru/courses" class = "header__link">
               Курсы
             </a>
-            <a href = "#" class = "header__link">
+            <a href = "https://javascript.ru/forum/" class = "header__link">
               Форум
             </a>
-            <a href = "#" class = "header__link">
+            <a href = "https://learn.javascript.ru/quiz" class = "header__link">
               Тесты знаний
             </a>
             <a href = "#" class = "header__link">
@@ -59,7 +60,7 @@
     </header>
     <main>
       <div class = "page">
-        <div class = "navigation">
+        <div id = "nav" class = "navigation">
           <div class = "navigation__items">
             <span class = "navigation__chapter">
               Раздел
@@ -96,11 +97,23 @@
             </a>
           </div>
         </div>
+        <div id = "hider" class = "navigation__menu">
+            <img src = "images/menu.svg" alt = "menu">
+          </div>
+          <a id = "map" class = "navigation__map" href="https://learn.javascript.ru/tutorial/map">
+            <img src = "images/map.svg" alt = "map">
+          </a>
         <div class = "content">
           <div class = "content__body">
+            <a id = "leftArrow" class = "content__arrow-left" href = "https://learn.javascript.ru/getting-started">
+              <img src = "images/left-arrow.svg" alt = "left-arrow">
+            </a>
+            <a class = "content__arrow-right"  href = "https://learn.javascript.ru/manuals-specifications">
+              <img src = "images/right-arrow.svg" alt = "right-arrow">
+            </a>
             <div class = "content__info">
               <div class = "content__breadcrumb">
-                <img src="images/home.svg" alt="" />
+                <img src="images/home.svg" alt = "#" />
                 &#8594;
                 <a href = "https://learn.javascript.ru/js" class = "content__nav">
                   Язык JavaScript
@@ -160,14 +173,137 @@
                 </p>
               </div>
               <p>
+                Сегодня JavaScript может выполняться не только в браузере, но и на 
+                сервере или на любом другом устройстве, которое имеет специальную программу, 
+                называющуюся 
+                <a href = "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA_JavaScript">
+                  «движком» JavaScript
+                </a>.
+              </p>
+              <p>
+                У браузера есть собственный движок, который иногда называют «виртуальная машина JavaScript».
+              </p>
+              <p>
+                Разные движки имеют разные «кодовые имена». Например:
+              </p>
+              <ul>
+                <li>
+                  <a href = "https://ru.wikipedia.org/wiki/V8_(%D0%B4%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA_JavaScript)">
+                    V8
+                  </a>
+                   – в Chrome, Opera и Edge.
+                </li>
+                <li>
+                  <a href = "https://ru.wikipedia.org/wiki/SpiderMonkey">
+                    SpiderMonkey
+                  </a>
+                   – в Firefox.
+                </li>
+                <li>
+                  …Ещё есть «Chakra» для IE, «JavaScriptCore», «Nitro» и «SquirrelFish» для Safari и т.д.
+                </li>
+              </ul>
+              <p>
+                Эти названия полезно знать, так как они часто используются в статьях для разработчиков. 
+                Мы тоже будем их использовать. Например, если «функциональность X поддерживается V8», 
+                тогда «Х», скорее всего, работает в Chrome, Opera и Edge.
+              </p>
+              <p>
                 И т. д...
               </p>
+              <h2 class = "content__subtitle">
+                Итого
+              </h2>
+              <ul>
+                <li>
+                  JavaScript изначально создавался только для браузера, 
+                  но сейчас используется на многих других платформах.
+                </li>
+                <li>
+                  Сегодня JavaScript занимает уникальную позицию в качестве самого 
+                  распространённого языка для браузера, обладающего полной интеграцией с HTML/CSS.
+                </li>
+                <li>
+                  Многие языки могут быть «транспилированы» в JavaScript для предоставления 
+                  дополнительных функций. Рекомендуется хотя бы кратко рассмотреть их после освоения JavaScript.
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-        <div class = "comments">
-          <div class = "comments__header">
-            
+            <div class = "comments">
+              <div class = "comments__header">
+                <div>
+                  <img src = "images/message.svg" alt="msg" />
+                  <h2 class = "content__subtitle"> 
+                    Комментарии
+                  </h2>
+                </div>
+                <span class = "comments__important">
+                  перед тем как писать…
+                </span>
+              </div>
+              <div class = "comments__counter">
+                Комментариев: 0
+              </div>
+              <div class = "comments__textarea">
+                <img src = "images/j.jpg" alt = "avatar">
+                <textarea placeholder = "Присоединиться к обсуждению..." name = "comment" id = "comment-text"></textarea>
+              </div>
+              <form class = "comments__data">
+                <div>
+                  <input id = "name" type = "text" placeholder = "Имя">
+                  <input id = "date" type = "date" value ="" placeholder = "Выбор даты(необязательно)">
+                </div>
+                <button type = "submit">Comment</button>
+              </form>
+              <div class = "solo-comments">
+                <div class = "solo-comments__body">
+                  <div class = "solo-comments__leftblock">
+                    <img class = "solo-comments__avatar" src = "images/j.jpg" alt="avatar">
+                    <div class = "solo-comments__info">
+                      <span class = "solo-comments__name">
+                        Genadiy
+                      </span>
+                      <span  class = "solo-comments__date">
+                        Сегодня
+                      </span>
+                      <p  class = "solo-comments__text">
+                        Влетаем!
+                      </p>
+                    </div>
+                  </div>
+                  <div class = "solo-comments__actions">
+                    <img src = "images/like.svg" alt = "like">
+                    <img data-del="delete" id = "deleteComment" src = "images/delete.svg" alt="delete">
+                  </div>
+                </div>
+                <div class = "solo-comments__body">
+                  <div class = "solo-comments__leftblock">
+                    <img class = "solo-comments__avatar" src = "images/j.jpg" alt="avatar">
+                    <div class = "solo-comments__info">
+                      <span class = "solo-comments__name">
+                        Anton
+                      </span>
+                      <span  class = "solo-comments__date">
+                        Вчера
+                      </span>
+                      <p  class = "solo-comments__text">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                        qui officia deserunt mollit anim id est laborum."
+                      </p>
+                    </div>
+                  </div>
+                  <div class = "solo-comments__actions">
+                    <img id = "likeComment" src = "images/like.svg" alt = "like">
+                    <img data-del="delete" id = "deleteComment" src = "images/delete.svg" alt="delete">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
