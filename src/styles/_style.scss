@@ -53,10 +53,16 @@ a {
         }
         .header__desc {
             margin-top: 1px;
+            cursor: pointer;
         }
         .header__globe {
             width: 22px;
             height: 22px;
+            svg {
+               path {
+                fill: blue
+            } 
+            } 
         }
         .header__links {
             display: flex;
@@ -324,6 +330,7 @@ a {
 }
 .comments {
     margin-top: 2rem;
+    position: relative;
     .comments__header {
         display: flex;
         justify-content: space-between;
@@ -408,6 +415,16 @@ a {
             }
         }
     }
+    .comments__notice {
+        position: absolute;
+        text-align: center;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #e3796a;
+        left: 66px;
+        top: 300px;
+        visibility: hidden;
+    }
     .solo-comments {
         height: fit-content;
         margin: 1.5rem 0;
@@ -416,7 +433,7 @@ a {
         display: flex;
         flex-direction: column;
         .solo-comments__body {
-            margin-top: 2rem;
+            margin-top: 3rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -428,11 +445,14 @@ a {
                     height: 52px;
                     border-radius: 16px;
                     margin-right: 1rem;
+                    cursor: pointer;
                 }
                 .solo-comments__info {
                     display: flex;
                     flex-direction: column;
                     .solo-comments__name {
+                        width: fit-content;
+                        cursor: pointer;
                         margin-top: 8px;
                         color: rgb(132, 160, 239);
                         font-weight: bold;
@@ -443,12 +463,17 @@ a {
                         margin: 6px 0;
                     }
                     .solo-comments__text {
-                        width: 660px;
+                        word-wrap: break-word;
+                        width: 630px;
                     }
                 }
             }
             .solo-comments__actions {
+                height: fit-content;
+                display: flex;
+                align-items: center;
                 img {
+                    margin-left: 5px;
                     cursor: pointer;
                 }
             }

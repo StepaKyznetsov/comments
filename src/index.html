@@ -11,11 +11,11 @@
       <div class = "header">
         <div class = "header__nav">
           <div class = "header__lang">
-            <img class = "header__globe" src="images/globe.svg" alt = "lang"> 
+            <object class = "header__globe" type="image/svg+xml" data="images/globe.svg">
+            </object>
             <span class = "header__desc">RU</span>
           </div>
           <object class = "header__title" type="image/svg+xml" data="images/logo.svg">
-            <img src = "images/logo.svg" alt = "logo"/>
           </object>
           <nav class = "header__links">
             <a href = "https://learn.javascript.ru/" class = "header__link active">
@@ -232,7 +232,7 @@
             <div class = "comments">
               <div class = "comments__header">
                 <div>
-                  <img src = "images/message.svg" alt="msg" />
+                  <img src = "images/message.svg" alt = "msg" />
                   <h2 class = "content__subtitle"> 
                     Комментарии
                   </h2>
@@ -241,50 +241,54 @@
                   перед тем как писать…
                 </span>
               </div>
-              <div class = "comments__counter">
-                Комментариев: 0
+              <div id = "commentsCounter" class = "comments__counter">
+                
               </div>
               <div class = "comments__textarea">
                 <img src = "images/j.jpg" alt = "avatar">
-                <textarea placeholder = "Присоединиться к обсуждению..." name = "comment" id = "comment-text"></textarea>
+                <textarea placeholder = "Присоединиться к обсуждению..." name = "comment" id = "commentText"></textarea>
               </div>
               <form class = "comments__data">
                 <div>
-                  <input id = "name" type = "text" placeholder = "Имя">
-                  <input id = "date" type = "date" value ="" placeholder = "Выбор даты(необязательно)">
+                  <input name = "name" id = "name" type = "text" placeholder = "Имя">
+                  <input type = "date">
                 </div>
-                <button type = "submit">Comment</button>
+                <button id = "typeComment" type = "submit">Comment</button>
               </form>
-              <div class = "solo-comments">
+              <div id = "notice" class = "comments__notice">
+                Имя должно включать от 2 до 30 символов! Сообщение должно иметь более 5 символов!
+              </div>
+              <div id = "comments" class = "solo-comments">
                 <div class = "solo-comments__body">
                   <div class = "solo-comments__leftblock">
-                    <img class = "solo-comments__avatar" src = "images/j.jpg" alt="avatar">
+                    <img class = "solo-comments__avatar" src = "images/j.jpg" alt = "avatar">
                     <div class = "solo-comments__info">
                       <span class = "solo-comments__name">
                         Genadiy
                       </span>
-                      <span  class = "solo-comments__date">
-                        Сегодня
+                      <span class = "solo-comments__date">
+                        Сегодня, 07:12
                       </span>
-                      <p  class = "solo-comments__text">
+                      <p class = "solo-comments__text">
                         Влетаем!
                       </p>
                     </div>
                   </div>
                   <div class = "solo-comments__actions">
-                    <img src = "images/like.svg" alt = "like">
-                    <img data-del="delete" id = "deleteComment" src = "images/delete.svg" alt="delete">
+                    <span class = "solo-comments__likesCounter">4</span>
+                    <img class = "solo-comments__like" src = "images/like.svg" alt = "like">
+                    <img data-del="delete" src = "images/delete.svg" alt="delete">
                   </div>
                 </div>
                 <div class = "solo-comments__body">
                   <div class = "solo-comments__leftblock">
-                    <img class = "solo-comments__avatar" src = "images/j.jpg" alt="avatar">
+                    <img class = "solo-comments__avatar" src = "images/j.jpg" alt = "avatar">
                     <div class = "solo-comments__info">
                       <span class = "solo-comments__name">
                         Anton
                       </span>
                       <span  class = "solo-comments__date">
-                        Вчера
+                        Вчера, 22:44
                       </span>
                       <p  class = "solo-comments__text">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -298,8 +302,9 @@
                     </div>
                   </div>
                   <div class = "solo-comments__actions">
-                    <img id = "likeComment" src = "images/like.svg" alt = "like">
-                    <img data-del="delete" id = "deleteComment" src = "images/delete.svg" alt="delete">
+                    <span class = "solo-comments__likesCounter">13</span>
+                    <img class = "solo-comments__like" src = "images/like.svg" alt = "like">
+                    <img data-del="delete" src = "images/delete.svg" alt = "delete">
                   </div>
                 </div>
               </div>
