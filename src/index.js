@@ -5,6 +5,7 @@ let text = document.getElementById('commentText')
 let name = document.getElementById('name')
 let date = document.querySelector('input[type = "date"]')
 let i = 0
+let imagesPath = 'http://localhost:3000/assets'
 
 //предварительное получение числа комментариев и добавление обработчиков событий к имеющимся кнопкам лайка
 getCommentsCounter()
@@ -29,10 +30,8 @@ function hideNav() {
 function postComment(e) {
     e.preventDefault()
 
-    if (name.value.length < 2 || name.value.length > 30 || text.value.length < 5) 
+    if (name.value.trim().length < 2 || name.value.trim().length > 30 || text.value.trim().length < 5)
         return notice.style.visibility = "visible"
-
-    let imagesPath = 'http://localhost:3000/assets'
 
     comments.insertAdjacentHTML('afterbegin', 
     `
@@ -41,13 +40,13 @@ function postComment(e) {
             <img class = "solo-comments__avatar" src = "${imagesPath}/j.jpg" alt = "avatar">
             <div class = "solo-comments__info">
                 <span class = "solo-comments__name">
-                    ${name.value}
+                    ${name.value.trim()}
                 </span>
                 <span  class = "solo-comments__date">
                     ${getDaysDifference()}, ${getTime()}
                 </span>
                 <p class = "solo-comments__text">
-                    ${text.value}
+                    ${text.value.trim()}
                 </p>
             </div>
         </div>
@@ -59,6 +58,7 @@ function postComment(e) {
     </div>
     `
     )
+
     name.value = ''
     text.value = ''
     date.value = ''
@@ -115,7 +115,6 @@ function getTime() {
 }
 //получение разницы между текущей и вводимой датами
 function getDaysDifference() {
-    let typeDate = ''
 
     if (!date.value) return 'Сегодня'
 
@@ -126,28 +125,20 @@ function getDaysDifference() {
 
     switch (diff) {
         case 0:
-            typeDate = 'Сегодня'
-            break
+            return 'Сегодня'
         case 1:
-            typeDate = 'Вчера'
-            break
+            return 'Вчера'
         case 2:
-            typeDate = '2 дня назад'
-            break
+            return '2 дня назад'
         case 3:
-            typeDate = '3 дня назад'
-            break
+            return '3 дня назад'
         case 4:
-            typeDate = '4 дня назад'
-            break
+            return '4 дня назад'
         case 5:
-            typeDate = '5 дней назад'
-            break
+            return '5 дней назад'
         default :
-            typeDate = date.value.split('-').reverse().join('-')
-            break
+            return date.value.split('-').reverse().join('-')
     }
-    return typeDate
 }
 //счетчик коммментариев
 function getCommentsCounter() {
@@ -160,22 +151,28 @@ function likesToggle() {
     let likeCounts = Array.from(document.querySelectorAll('.solo-comments__likesCounter'))
 
     likeButtons.forEach((button, index) => {
-       
         if (i !== 0 && index !== 0) return
         
         button.addEventListener("click", () => {
-            button.classList.toggle("is-active");
-            const current = Number(likeCounts[index].innerHTML);
-            const inc = button.classList.contains("is-active") ? 1 : -1;
-            likeCounts[index].innerHTML = current + inc;
+            button.classList.toggle("is-active")
+            const current = Number(likeCounts[index].innerHTML)
+            const inc = button.classList.contains("is-active") ? 1 : -1
+            likeCounts[index].innerHTML = current + inc
             button.removeEventListener("click")
         })
-    }) 
-    i++
+    })
+    i = 1
 }
 //все остальные обработчики событий
-commentText.addEventListener("beforeinput", () => notice.style.visibility = "hidden")
-name.addEventListener("beforeinput", () => notice.style.visibility = "hidden")
+commentText.addEventListener("beforeinput", () =>
+    notice.style.visibility = "hidden")
+
+name.addEventListener("beforeinput", () =>
+    notice.style.visibility = "hidden")
+
 hider.addEventListener("click", hideNav)
+
 typeComment.addEventListener("click", postComment)
-document.addEventListener("click", removeComment("solo-comments__body", "data-del", "delete"))
+
+document.addEventListener("click",
+    removeComment("solo-comments__body", "data-del", "delete"))
