@@ -7,12 +7,15 @@ let date = document.querySelector('input[type = "date"]')
 let i = 0
 let imagesPath = 'http://localhost:3000/assets'
 
+//ограничение календаря, чтобы не было сообщений из будущего
+date.setAttribute('max', getDate())
+
 //предварительное получение числа комментариев и добавление обработчиков событий к имеющимся кнопкам лайка
 getCommentsCounter()
 likesToggle()
 
 //скрытие и появление сайдбара
-function hideNav() {
+function toggleSideBar() {
     if (nav.style.display !== 'none') {
         nav.style.display = 'none'
         leftArrow.style.left = '0'
@@ -161,6 +164,7 @@ function likesToggle() {
             button.removeEventListener("click")
         })
     })
+//установка значения глобальной переменной с целью предотвращения повторной установки слушателя клика     
     i = 1
 }
 //все остальные обработчики событий
@@ -170,7 +174,7 @@ commentText.addEventListener("beforeinput", () =>
 name.addEventListener("beforeinput", () =>
     notice.style.visibility = "hidden")
 
-hider.addEventListener("click", hideNav)
+hider.addEventListener("click", toggleSideBar)
 
 typeComment.addEventListener("click", postComment)
 
