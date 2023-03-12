@@ -472,6 +472,15 @@ a {
                 height: fit-content;
                 display: flex;
                 align-items: center;
+                svg {
+                    cursor: pointer;
+                    &:hover path {
+                     stroke: #d24239;
+                    }
+                }
+                .active-svg {
+                     stroke: #d24239;
+                }
                 img {
                     margin-left: 5px;
                     cursor: pointer;
