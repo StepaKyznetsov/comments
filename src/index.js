@@ -34,7 +34,7 @@ function postComment(e) {
     e.preventDefault()
 
     if (name.value.trim().length < 2 || name.value.trim().length > 30 || text.value.trim().length < 5)
-        return notice.style.visibility = "visible"
+        return notice.style.visibility = 'visible'
 
     comments.insertAdjacentHTML('afterbegin', 
     `
@@ -185,16 +185,16 @@ function getCommentsCounter() {
 function likesToggle() {
     let likeButtons = Array.from(document.querySelectorAll('.solo-comments__like'))
     let likeCounts = Array.from(document.querySelectorAll('.solo-comments__likesCounter'))
-    let icons = Array.from(document.getElementsByClassName("stroke-like"))
+    let icons = Array.from(document.getElementsByClassName('stroke-like'))
 
     likeButtons.forEach((button, index) => {
         if (i !== 0 && index !== 0) return
         
-        button.addEventListener("click", () => {
+        button.addEventListener('click', () => {
             icons[index].classList.toggle('active-svg')
-            button.classList.toggle("is-active")
+            button.classList.toggle('is-active')
             const current = Number(likeCounts[index].innerHTML)
-            const inc = button.classList.contains("is-active") ? 1 : -1
+            const inc = button.classList.contains('is-active') ? 1 : -1
             likeCounts[index].innerHTML = current + inc
         })
     })
@@ -202,19 +202,19 @@ function likesToggle() {
     i = 1
 }
 //все остальные обработчики событий
-commentText.addEventListener("beforeinput", () =>
-    notice.style.visibility = "hidden")
+commentText.addEventListener('beforeinput', () =>
+    notice.style.visibility = 'hidden')
 
-commentText.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") postComment(e) 
+commentText.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') postComment(e) 
 })
 
-name.addEventListener("beforeinput", () =>
-    notice.style.visibility = "hidden")
+name.addEventListener('beforeinput', () =>
+    notice.style.visibility = 'hidden')
 
-hider.addEventListener("click", toggleSideBar)
+hider.addEventListener('click', toggleSideBar)
 
-typeComment.addEventListener("click", postComment)
+typeComment.addEventListener('click', postComment)
 
-document.addEventListener("click",
-    removeComment("solo-comments__body", "data-del", "delete"))
+document.addEventListener('click',
+    removeComment('solo-comments__body', 'data-del', 'delete'))

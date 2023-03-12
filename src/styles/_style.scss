@@ -477,6 +477,9 @@ a {
                     &:hover path {
                      stroke: #d24239;
                     }
+                    path {
+                        pointer-events: none;
+                    }
                 }
                 .active-svg {
                      stroke: #d24239;
