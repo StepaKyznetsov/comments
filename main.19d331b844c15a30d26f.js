@@ -960,7 +960,7 @@ var text = document.getElementById('commentText');
 var name = document.getElementById('name');
 var date = document.querySelector('input[type = "date"]');
 var i = 0;
-var imagesPath = 'http://localhost:3000/assets' || 0;
+var imagesPath = 'https://stepakyznetsov.github.io/comments/assets';
 
 //ограничение календаря, чтобы не было сообщений из будущего
 date.setAttribute('max', getDate());
@@ -1091,4 +1091,4 @@ document.addEventListener('click', removeComment('solo-comments__body', 'data-de
 
 /******/ })()
 ;
-//# sourceMappingURL=main.9d443f89dbacafb51249.js.map
+//# sourceMappingURL=main.19d331b844c15a30d26f.js.map
