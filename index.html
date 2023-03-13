@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.png" />    
+    <title>Введение в JavaScript</title>
+  <script defer src="main.042d88a664e0d2b0a904.js"></script></head>
+  <body>
+    <header>
+      <div class = "header">
+        <div class = "header__nav">
+          <div class = "header__lang">
+            <object class = "header__globe" type="image/svg+xml" data="assets/globe.svg">
+            </object>
+            <span class = "header__desc">RU</span>
+          </div>
+          <object class = "header__title" type="image/svg+xml" data="assets/logo.svg">
+          </object>
+          <nav class = "header__links">
+            <a href = "https://learn.javascript.ru/" class = "header__link active">
+              Учебник
+            </a>
+            <a href = "https://learn.javascript.ru/courses" class = "header__link">
+              Курсы
+            </a>
+            <a href = "https://javascript.ru/forum/" class = "header__link">
+              Форум
+            </a>
+            <a href = "https://learn.javascript.ru/quiz" class = "header__link">
+              Тесты знаний
+            </a>
+            <a href = "#" class = "header__link">
+              Скринкасты
+            </a>
+          </nav>
+        </div>
+        <div class = "header__other">
+          <div class = "header__buttons">
+            <button class = "header__btn active">
+              Набор на курсы
+            </button>
+            <button class = "header__btn">
+              Купить EPUB/PDF
+            </button>
+          </div>
+          <div class = "header__menu">
+            <a class = "header__item" href = "#"> 
+              <img src="assets/user.svg" alt = "login" />
+            </a>
+            <a class = "header__item" href = "#">
+              <img src="assets/light.svg" alt = "theme" />
+            </a>
+            <a class = "header__item" href = "#">
+              <img src="assets/search.svg" alt = "search" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class = "page">
+        <div id = "nav" class = "navigation">
+          <div class = "navigation__items">
+            <span class = "navigation__chapter">
+              Раздел
+            </span>
+            <a href = "https://learn.javascript.ru/getting-started" class = "navigation__paragraph">
+              Введение
+            </a>
+            <span class = "navigation__chapter">
+              Навигация по уроку
+            </span>
+            <a href = "#whatisjs" class = "navigation__paragraph">
+              Что такое JavaScript?
+            </a>
+            <a href = "#" class = "navigation__paragraph">
+              Что может JavaScript в браузере?
+            </a>
+            <a href = "#" class = "navigation__paragraph">
+              Чего НЕ может JavaScript в браузере?
+            </a>
+            <a href = "#" class = "navigation__paragraph">
+              Что делает JavaScript особенным?
+            </a>
+            <a href = "#" class = "navigation__paragraph">
+              Языки «над» JavaScript
+            </a>
+            <a href = "#itogo" class = "navigation__paragraph">
+              Итого
+            </a>
+            <a href = "#commentaries" class = "navigation__paragraph">
+              Комментарии
+            </a>
+            <a href = "https://github.com/javascript-tutorial/ru.javascript.info/tree/master/1-js/01-getting-started/1-intro" class = "navigation__paragraph">
+              Редактировать на GitHub
+            </a>
+          </div>
+        </div>
+        <div id = "hider" class = "navigation__menu">
+            <img src = "assets/menu.svg" alt = "menu">
+          </div>
+          <a id = "map" class = "navigation__map" href="https://learn.javascript.ru/tutorial/map">
+            <img src = "assets/map.svg" alt = "map">
+          </a>
+        <div class = "content">
+          <div class = "content__body">
+            <a id = "leftArrow" class = "content__arrow-left" href = "https://learn.javascript.ru/getting-started">
+              <img src = "assets/left-arrow.svg" alt = "left-arrow">
+            </a>
+            <a class = "content__arrow-right"  href = "https://learn.javascript.ru/manuals-specifications">
+              <img src = "assets/right-arrow.svg" alt = "right-arrow">
+            </a>
+            <div class = "content__info">
+              <div class = "content__breadcrumb">
+                <img src="assets/home.svg" alt = "#" />
+                &#8594;
+                <a href = "https://learn.javascript.ru/js" class = "content__nav">
+                  Язык JavaScript
+                </a>
+                &#8594;
+                <a href = "https://learn.javascript.ru/getting-started" class = "content__nav">
+                  Введение
+                </a>
+              </div>
+              <div class = "content__updatedat">
+                <span class = "content__date">
+                  7 июня 2022 г.
+                </span>
+              </div>
+            </div>
+            <div class = "content__text">
+              <h1 class = "content__title">
+                Введение в JavaScript
+              </h1>
+              <p class = "content__paragraph">
+                Давайте посмотрим, что такого особенного в JavaScript, 
+                чего можно достичь с его помощью и какие другие технологии хорошо с ним работают.
+              </p>
+              <h2 id = 'whatisjs' class = "content__subtitle">
+                Что такое JavaScript?
+              </h2>  
+              <p>
+                Изначально <i>JavaScript</i> был создан, чтобы <i>«сделать веб-страницы живыми»</i>.
+              </p>
+              <p>
+                Программы на этом языке называются <i>скриптами</i>. 
+                Они могут встраиваться в HTML и выполняться автоматически при загрузке веб-страницы.
+              </p>
+              <p>
+                Скрипты распространяются и выполняются, как простой текст. 
+                Им не нужна специальная подготовка или компиляция для запуска.
+              </p>
+              <p>
+                Это отличает JavaScript от другого языка – <a href = "https://ru.wikipedia.org/wiki/Java">Java</a>.
+              </p>
+              <div class = "content__info">
+                <div class = "content__question">
+                  <img src = "assets/info.svg" alt="info" />
+                  <span>
+                    Почему <u>Java</u>Script?
+                  </span>
+                </div>
+                <p>
+                  Когда JavaScript создавался, у него было другое имя – «LiveScript». 
+                  Однако, язык Java был очень популярен в то время, и было решено, что 
+                  позиционирование JavaScript как «младшего брата» Java будет полезно.
+                </p>
+                <p>
+                  Со временем JavaScript стал полностью независимым языком со своей собственной спецификацией, 
+                  называющейся <a href = "https://ru.wikipedia.org/wiki/ECMAScript">ECMAScript</a>
+                  , и сейчас не имеет никакого отношения к Java.
+                </p>
+              </div>
+              <p>
+                Сегодня JavaScript может выполняться не только в браузере, но и на 
+                сервере или на любом другом устройстве, которое имеет специальную программу, 
+                называющуюся 
+                <a href = "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA_JavaScript">
+                  «движком» JavaScript
+                </a>.
+              </p>
+              <p>
+                У браузера есть собственный движок, который иногда называют «виртуальная машина JavaScript».
+              </p>
+              <p>
+                Разные движки имеют разные «кодовые имена». Например:
+              </p>
+              <ul>
+                <li>
+                  <a href = "https://ru.wikipedia.org/wiki/V8_(%D0%B4%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA_JavaScript)">
+                    V8
+                  </a>
+                   – в Chrome, Opera и Edge.
+                </li>
+                <li>
+                  <a href = "https://ru.wikipedia.org/wiki/SpiderMonkey">
+                    SpiderMonkey
+                  </a>
+                   – в Firefox.
+                </li>
+                <li>
+                  …Ещё есть «Chakra» для IE, «JavaScriptCore», «Nitro» и «SquirrelFish» для Safari и т.д.
+                </li>
+              </ul>
+              <p>
+                Эти названия полезно знать, так как они часто используются в статьях для разработчиков. 
+                Мы тоже будем их использовать. Например, если «функциональность X поддерживается V8», 
+                тогда «Х», скорее всего, работает в Chrome, Opera и Edge.
+              </p>
+              <p>
+                И т. д...
+              </p>
+              <h2 id = "itogo" class = "content__subtitle">
+                Итого
+              </h2>
+              <ul>
+                <li>
+                  JavaScript изначально создавался только для браузера, 
+                  но сейчас используется на многих других платформах.
+                </li>
+                <li>
+                  Сегодня JavaScript занимает уникальную позицию в качестве самого 
+                  распространённого языка для браузера, обладающего полной интеграцией с HTML/CSS.
+                </li>
+                <li>
+                  Многие языки могут быть «транспилированы» в JavaScript для предоставления 
+                  дополнительных функций. Рекомендуется хотя бы кратко рассмотреть их после освоения JavaScript.
+                </li>
+              </ul>
+            </div>
+            <div class = "comments">
+              <div class = "comments__header">
+                <div>
+                  <img src = "assets/message.svg" alt = "msg" />
+                  <h2 id = "commentaries" class = "content__subtitle"> 
+                    Комментарии
+                  </h2>
+                </div>
+                <span class = "comments__important">
+                  перед тем как писать…
+                </span>
+              </div>
+              <div id = "commentsCounter" class = "comments__counter">
+              </div>
+              <div class = "comments__textarea">
+                <img src = "assets/j.jpg" alt = "avatar">
+                <textarea placeholder = "Присоединиться к обсуждению..." name = "comment" id = "commentText"></textarea>
+              </div>
+              <form class = "comments__data">
+                <div>
+                  <input name = "name" id = "name" type = "text" placeholder = "Имя">
+                  <input type = "date" >
+                </div>
+                <button id = "typeComment" type = "submit">Comment</button>
+              </form>
+              <div id = "notice" class = "comments__notice">
+                Имя должно включать от 2 до 30 символов! Сообщение должно иметь более 5 символов!
+              </div>
+              <div id = "comments" class = "solo-comments">
+                <div class = "solo-comments__body">
+                  <div class = "solo-comments__leftblock">
+                    <img class = "solo-comments__avatar" src = "assets/j.jpg" alt = "avatar">
+                    <div class = "solo-comments__info">
+                      <span class = "solo-comments__name">
+                        Genadiy
+                      </span>
+                      <span class = "solo-comments__date">
+                        07-02-2023, 07:12
+                      </span>
+                      <p class = "solo-comments__text">
+                        Влетаем!
+                      </p>
+                    </div>
+                  </div>
+                  <div class = "solo-comments__actions">
+                    <span class = "solo-comments__likesCounter">4</span>
+                    <svg class = "solo-comments__like"
+                         width="30px"
+                         height="30px"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path class="stroke-like" d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L13.1956
+                            3.93847C13.6886 3.3633 14.4642 3.11604 15.1992 3.29977L15.2467
+                            3.31166C16.5885 3.64711 17.1929 5.21057 16.4258 6.36135L14
+                            9.99998H18.5604C19.8225 9.99998 20.7691 11.1546 20.5216
+                            12.3922L19.3216 18.3922C19.1346 19.3271 18.3138 20 17.3604 20L8 20"
+                            stroke="#868d9a"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                    <svg data-del="delete"
+                         width="30px"
+                         height="30px"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.15"
+                            d="M18 18V6H6V18C6 19.1046 6.89543
+                             20 8 20H16C17.1046 20 18 19.1046 18 18Z"
+                            fill="none"/>
+                      <path d="M10 10V16M14 10V16M18 6V18C18 19.1046
+                            17.1046 20 16 20H8C6.89543 20 6 19.1046 6 18V6M4
+                            6H20M15 6V5C15 3.89543 14.1046 3 13 3H11C9.89543 3 9 3.89543
+                            9 5V6"
+                            stroke="#868d9a"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class = "solo-comments__body">
+                  <div class = "solo-comments__leftblock">
+                    <img class = "solo-comments__avatar" src = "assets/j.jpg" alt = "avatar">
+                    <div class = "solo-comments__info">
+                      <span class = "solo-comments__name">
+                        Anton
+                      </span>
+                      <span  class = "solo-comments__date">
+                        22-01-2023, 22:44
+                      </span>
+                      <p class = "solo-comments__text">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                        qui officia deserunt mollit anim id est laborum."
+                      </p>
+                    </div>
+                  </div>
+                  <div class = "solo-comments__actions">
+                    <span class = "solo-comments__likesCounter">13</span>
+                    <svg class = "solo-comments__like"
+                         width="30px"
+                         height="30px"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path class="stroke-like" d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L13.1956
+                            3.93847C13.6886 3.3633 14.4642 3.11604 15.1992 3.29977L15.2467
+                            3.31166C16.5885 3.64711 17.1929 5.21057 16.4258 6.36135L14
+                            9.99998H18.5604C19.8225 9.99998 20.7691 11.1546 20.5216
+                            12.3922L19.3216 18.3922C19.1346 19.3271 18.3138 20 17.3604 20L8 20"
+                            stroke="#868d9a"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                    <svg data-del="delete"
+                         width="30px"
+                         height="30px"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.15"
+                            d="M18 18V6H6V18C6 19.1046 6.89543
+                            20 8 20H16C17.1046 20 18 19.1046 18 18Z"
+                            fill="none"/>
+                      <path d="M10 10V16M14 10V16M18 6V18C18 19.1046
+                            17.1046 20 16 20H8C6.89543 20 6 19.1046 6 18V6M4
+                            6H20M15 6V5C15 3.89543 14.1046 3 13 3H11C9.89543 3 9 3.89543
+                            9 5V6"
+                            stroke="#868d9a"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
